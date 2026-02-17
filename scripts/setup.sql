@@ -5,14 +5,14 @@ Author:       Jeremiah Hansen
 Last Updated: 2/12/2026
 -----------------------------------------------------------------------------*/
 
-
+-- TEST
 -- ----------------------------------------------------------------------------
 -- Create the account level objects (ACCOUNTADMIN part)
 -- ----------------------------------------------------------------------------
 SET MY_USER = CURRENT_USER();
 USE ROLE ACCOUNTADMIN;
 
--- Roles
+-- Roles --
 CREATE OR REPLACE ROLE DEMO_ROLE;
 GRANT ROLE DEMO_ROLE TO ROLE SYSADMIN;
 GRANT ROLE DEMO_ROLE TO USER IDENTIFIER($MY_USER);
